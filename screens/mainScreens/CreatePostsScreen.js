@@ -82,8 +82,7 @@ const CreatePostsScreen = ({ navigation }) => {
       image: photo,
       comments: 0,
       likes: 0,
-      country: { country: postLocation },
-      postLocationGPS,
+      location: { country: postLocation, ...postLocationGPS },
     };
     console.log(newPost);
     navigation.navigate("DefaultPostScreen", {
